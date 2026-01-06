@@ -14,6 +14,7 @@ A user can make up to 5 API requests within any 5-second fixed window.
 #include <bits/stdc++.h>
 using namespace std;
 
+//Abstract Class
 class RateLimitter
 {
 public:
@@ -26,6 +27,8 @@ struct RequestData
     long windowStart = time(nullptr) * 1000;
 };
 
+
+//inherit the property of parent class
 class FixedWindowRateLimiter : public RateLimitter
 {
 private:
